@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Convert temperatures between Celsius, Fahrenheit, and Kelvin."
+    />
+    <title>Temperature Converter | Veda Technology</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <a class="brand" href="#" aria-label="Temperature Converter home">
+          <span class="brand-mark" aria-hidden="true">°</span>
+          <span>VEDA <span class="brand-light">TECHNOLOGY</span></span>
+        </a>
+        <p class="task-label">DAY 5 <span aria-hidden="true">·</span> LEVEL 1 TASK</p>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">A little clarity for any climate</p>
+        <h1 id="page-title">Temperature <span>Converter</span></h1>
+        <p class="subtitle">Convert temperatures quickly and accurately</p>
+      </section>
+
+      <section class="converter-card" aria-label="Temperature conversion">
+        <div class="card-heading">
+          <div>
+            <p class="section-kicker">THE CONVERTER</p>
+            <h2>Make the switch</h2>
+          </div>
+          <span class="thermometer-icon" aria-hidden="true">🌡</span>
+        </div>
+
+        <form id="converter-form" novalidate>
+          <div class="input-group">
+            <label for="temperature-input">Temperature</label>
+            <div class="temperature-input-wrap">
+              <input
+                id="temperature-input"
+                name="temperature"
+                type="number"
+                step="any"
+                inputmode="decimal"
+                placeholder="Enter a value"
+                autocomplete="off"
+                aria-describedby="input-hint"
+              />
+              <span class="input-degree" aria-hidden="true">°</span>
+            </div>
+            <p class="field-hint" id="input-hint">Decimals and negative values are welcome.</p>
+          </div>
+
+          <div class="unit-row">
+            <div class="input-group">
+              <label for="from-unit">From</label>
+              <select id="from-unit" name="from-unit">
+                <option value="celsius" selected>Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+              </select>
+            </div>
+
+            <button
+              class="swap-button"
+              id="swap-button"
+              type="button"
+              aria-label="Swap source and target units"
+              title="Swap units"
+            >
+              <span aria-hidden="true">⇄</span>
+            </button>
+
+            <div class="input-group">
+              <label for="to-unit">To</label>
+              <select id="to-unit" name="to-unit">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit" selected>Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="convert-button" type="submit">Convert temperature</button>
+        </form>
+
+        <div class="result-panel" id="result-panel" aria-live="polite" aria-atomic="true">
+          <p class="result-label" id="result-label">YOUR RESULT</p>
+          <p class="result-value" id="result-value">—</p>
+          <p class="result-equation" id="result-equation">Your conversion will appear here.</p>
+        </div>
+
+        <button class="reset-button" id="reset-button" type="button">Reset converter</button>
+      </section>
+
+      <section class="units-section" aria-labelledby="units-title">
+        <p class="section-kicker">THREE SCALES, ONE PLACE</p>
+        <h2 id="units-title">Know your units</h2>
+        <div class="unit-cards">
+          <article class="unit-card">
+            <span class="unit-symbol celsius-symbol">°C</span>
+            <div>
+              <h3>Celsius</h3>
+              <p>Water freezes at 0° and boils at 100°.</p>
+            </div>
+          </article>
+          <article class="unit-card">
+            <span class="unit-symbol fahrenheit-symbol">°F</span>
+            <div>
+              <h3>Fahrenheit</h3>
+              <p>Water freezes at 32° and boils at 212°.</p>
+            </div>
+          </article>
+          <article class="unit-card">
+            <span class="unit-symbol kelvin-symbol">K</span>
+            <div>
+              <h3>Kelvin</h3>
+              <p>The scientific scale, starting at absolute zero.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <p>Created by <strong>Rutvi Jadav</strong> <span aria-hidden="true">|</span> Veda Technology Internship</p>
+        <p class="footer-note">Built for a world of changing temperatures.</p>
+      </footer>
+    </main>
+  </body>
+</html>
